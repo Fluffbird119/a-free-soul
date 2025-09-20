@@ -6,13 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private float speed = 1;
-    private float jumpForce = 5;
+    [SerializeField] private float jumpForce = 125;
 
     [SerializeField] private bool isGrounded;
 
     [SerializeField] private Vector2 moveDir;
 
     public GameObject cage;
+
+    public LayerMask mask;
 
     void Start()
     {
@@ -24,6 +26,17 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDir.x = Input.GetAxisRaw("Horizontal");
         //moveDir.y = rb.velocity.y;
+
+        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, 1.25f, mask);
+
+        if (hit)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
 
         // old movement code that touched velocity too much
         /*
@@ -45,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         */
-        
+
         if (isGrounded)
         {
             if (Input.GetKeyDown(KeyCode.W) && cage != null || Input.GetKeyDown(KeyCode.Space) && cage != null)
@@ -67,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     
-
+    /*
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -108,4 +121,5 @@ public class PlayerMovement : MonoBehaviour
             jumpForce = 25;
         }
     }
+    */
 }
