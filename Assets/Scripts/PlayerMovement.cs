@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Vector2 moveDir;
 
+    public GameObject cage;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (isGrounded)
         {
-            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+            if (Input.GetKeyDown(KeyCode.W) && cage != null || Input.GetKeyDown(KeyCode.Space) && cage != null)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
@@ -55,11 +57,11 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (isGrounded)
+        if (isGrounded && cage != null)
         {
             rb.AddForce(moveDir * speed, ForceMode2D.Impulse);
         }
-        else if (!isGrounded)
+        else if (!isGrounded && cage != null)
         {
             rb.AddForce(new Vector2(moveDir.x * speed * 0.5f, 0), ForceMode2D.Impulse);
         }
