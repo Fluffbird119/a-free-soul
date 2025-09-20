@@ -170,19 +170,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1815465365007022311, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
       propertyPath: cage
       value: 
       objectReference: {fileID: 1573207230}
+    - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: lineVisual
+      value: 
+      objectReference: {fileID: 1159485004}
+    - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: mask.m_Bits
+      value: 187
+      objectReference: {fileID: 0}
     - target: {fileID: 6933254999336860051, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6933254999336860051, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120038621119339761, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120038621119339761, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120038621119339761, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+--- !u!4 &1159485003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278719183332007126, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+  m_PrefabInstance: {fileID: 463338643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!120 &1159485004 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 9120038621119339761, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+  m_PrefabInstance: {fileID: 463338643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1573207230
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,8 +233,8 @@ GameObject:
   - component: {fileID: 1573207232}
   - component: {fileID: 1573207231}
   - component: {fileID: 1573207234}
-  m_Layer: 0
-  m_Name: square cage pixel art
+  m_Layer: 2
+  m_Name: square cage
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +390,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 30
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -378,7 +416,7 @@ GameObject:
   - component: {fileID: 1860199507}
   - component: {fileID: 1860199506}
   - component: {fileID: 1860199505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -508,6 +546,7 @@ GameObject:
   - component: {fileID: 1921408596}
   - component: {fileID: 1921408595}
   - component: {fileID: 1921408594}
+  - component: {fileID: 1921408597}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -558,7 +597,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -589,6 +628,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921408597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921408593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda9d1533b624dd4ab63e61bf83fabf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1159485003}
+  smoothTime: 0.3
+  distFromPlayer: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

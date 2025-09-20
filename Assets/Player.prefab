@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7214211612829606753}
   - component: {fileID: 5959290599497707019}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: headband
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 3857870165909765331}
   - component: {fileID: 4807947491888317444}
   - component: {fileID: 5371431279148798892}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,5 +293,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  jumpForce: 125
   isGrounded: 0
   moveDir: {x: 0, y: 0}
+  cage: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
