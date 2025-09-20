@@ -57,7 +57,7 @@ public class breakCage : MonoBehaviour
             {
                 if (x_speed < 2)
                 {
-                    y_damage_scaler = 5;
+                    y_damage_scaler = 10; // higher = less damage
                 }
                 else if (x_speed >= 2)
                 {
