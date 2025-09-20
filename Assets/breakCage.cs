@@ -11,6 +11,13 @@ public class breakCage : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    private GameObject holdervar;
+
+    public GameObject[] cage_pieces;
+
+    public int explosion_force = 5;
+
+
     void Start()
     {
         
@@ -20,6 +27,17 @@ public class breakCage : MonoBehaviour
     {
         x_speed = rb.velocity.x;
         y_speed = rb.velocity.y;
+
+        if (cage_health <= 0)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                holdervar = Instantiate(cage_pieces[i], transform.position, transform.rotation);
+                holdervar.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(10, 10),ForceMode2D.Impulse);
+            }
+
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

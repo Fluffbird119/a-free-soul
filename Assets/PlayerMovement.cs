@@ -71,6 +71,12 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            jumpForce = 125;
+        }
+        else if (collision.gameObject.tag == "Cage")
+        {
+            isGrounded = true;
+            jumpForce = 25;
         }
     }
 
@@ -80,6 +86,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+        else if (collision.gameObject.tag == "Cage")
+        {
+            isGrounded = true;
+            jumpForce = 25;
+        }
     }
 
     // in case unity misses the enters trigger
@@ -88,6 +99,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+        }
+        else if (collision.gameObject.tag == "Cage")
+        {
+            isGrounded = true;
+            jumpForce = 25;
         }
     }
 }

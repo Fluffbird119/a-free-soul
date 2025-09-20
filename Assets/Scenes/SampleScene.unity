@@ -1216,6 +1216,7 @@ MonoBehaviour:
   y_speed: 0
   cage_health: 5
   rb: {fileID: 1938413768}
+  cage_pieces: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
