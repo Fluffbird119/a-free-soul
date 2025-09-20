@@ -3279,7 +3279,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  jumpForce: 125
   isGrounded: 0
   moveDir: {x: 0, y: 0}
 --- !u!50 &567047420
@@ -5560,6 +5559,9 @@ MonoBehaviour:
   y_speed: 0
   cage_health: 1
   rb: {fileID: 1278651354}
+  explosion_force: 5
+  y_damage_scaler: 0
+  force_multiplier: 5
   cage_pieces:
   - {fileID: 7311147573032919868, guid: 4197201cc84262f4d94635646f45e30f, type: 3}
   - {fileID: 8479269331595701663, guid: 53a5fc191a819cf4d8b557678475287e, type: 3}
@@ -5571,7 +5573,6 @@ MonoBehaviour:
   - {fileID: 7370104184102835649, guid: 55b2cd124dd379047b9e74fda1b10b2f, type: 3}
   - {fileID: 5623973048572395495, guid: 0c0b87767d7275f41b1f5a140f5abefd, type: 3}
   - {fileID: 4304473985583839466, guid: 383c2a15f8560754dba3eecfe80ab97f, type: 3}
-  explosion_force: 5
 --- !u!50 &1278651354
 Rigidbody2D:
   serializedVersion: 4
@@ -8608,8 +8609,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4290888129
+  m_fontColor: {r: 0.7584905, g: 0.7584905, b: 0.7584905, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
