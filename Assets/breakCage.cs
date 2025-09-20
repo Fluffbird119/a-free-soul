@@ -33,7 +33,7 @@ public class breakCage : MonoBehaviour
             for (int i = 0; i < 10; i++)
             {
                 holdervar = Instantiate(cage_pieces[i], transform.position, transform.rotation);
-                holdervar.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(10, 10),ForceMode2D.Impulse);
+                holdervar.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(100, 100),ForceMode2D.Impulse);
             }
 
             Destroy(gameObject);
