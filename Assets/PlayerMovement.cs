@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
-    [SerializeField] private float speed = 5;
+    [SerializeField] private float speed = 1;
     [SerializeField] private float jumpForce = 5;
-    [SerializeField] private float groundCheckLength = 0.75f;
+
+    [SerializeField] private bool isGrounded;
+
+    [SerializeField] private Vector2 moveDir;
 
     void Start()
     {
@@ -17,19 +20,74 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A)) {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-        }
-        else if (Input.GetKey(KeyCode.D)) {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-        }
-        else {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
+        moveDir.x = Input.GetAxisRaw("Horizontal");
+        //moveDir.y = rb.velocity.y;
 
-        bool isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckLength, LayerMask.GetMask("Environment"));
-        if (isGrounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))) {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        // old movement code that touched velocity too much
+        /*
+        if (isGrounded)
+        { 
+            if (Input.GetKey(KeyCode.A)) {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
+            else if (Input.GetKey(KeyCode.D)) {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
+            else {
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+        }
+        */
+        
+        if (isGrounded)
+        {
+            if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)))
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+        }   
+    }
+    
+    private void FixedUpdate()
+    {
+        if (isGrounded)
+        {
+            rb.AddForce(moveDir * speed, ForceMode2D.Impulse);
+        }
+        else if (!isGrounded)
+        {
+            rb.AddForce(new Vector2(moveDir.x * speed * 0.5f, 0), ForceMode2D.Impulse);
+        }
+    }
+    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+       if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
+        }
+    }
+
+    // in case unity misses the enters trigger
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
         }
     }
 }
