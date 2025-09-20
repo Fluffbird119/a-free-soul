@@ -1216,7 +1216,18 @@ MonoBehaviour:
   y_speed: 0
   cage_health: 5
   rb: {fileID: 1938413768}
-  cage_pieces: []
+  cage_pieces:
+  - {fileID: 7311147573032919868, guid: 4197201cc84262f4d94635646f45e30f, type: 3}
+  - {fileID: 8479269331595701663, guid: 53a5fc191a819cf4d8b557678475287e, type: 3}
+  - {fileID: 637806983227061055, guid: fee3ffd7c34032745a24b283e8baeb53, type: 3}
+  - {fileID: 5563271102456666670, guid: f5bbb14521020044b9b2aa494fdcc5d2, type: 3}
+  - {fileID: 1960378123223188622, guid: df2be5f577005614cab055c62debc070, type: 3}
+  - {fileID: 3152921973065566119, guid: 1f10d7931c8f6ee46a33062fae70754e, type: 3}
+  - {fileID: 2461455262884936618, guid: 7ed7ec06dab213340bf97ca9bee5fb87, type: 3}
+  - {fileID: 7370104184102835649, guid: 55b2cd124dd379047b9e74fda1b10b2f, type: 3}
+  - {fileID: 5623973048572395495, guid: 0c0b87767d7275f41b1f5a140f5abefd, type: 3}
+  - {fileID: 4304473985583839466, guid: 383c2a15f8560754dba3eecfe80ab97f, type: 3}
+  explosion_force: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
