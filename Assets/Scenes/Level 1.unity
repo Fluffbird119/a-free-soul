@@ -3281,6 +3281,7 @@ MonoBehaviour:
   speed: 1
   isGrounded: 0
   moveDir: {x: 0, y: 0}
+  cage: {fileID: 1278651352}
 --- !u!50 &567047420
 Rigidbody2D:
   serializedVersion: 4
