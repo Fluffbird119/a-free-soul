@@ -7279,7 +7279,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052226629}
   m_Layer: 3
-  m_Name: Enviroment
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7307,7 +7307,6 @@ Transform:
   - {fileID: 1036957188}
   - {fileID: 217055184}
   - {fileID: 592838302}
-  - {fileID: 1436503625}
   - {fileID: 1791447728}
   - {fileID: 1947941066}
   - {fileID: 1973433000}
@@ -8458,13 +8457,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4290953922
   m_fontColor: {r: 0.7607843, g: 0.7607843, b: 0.7607843, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.26666668, g: 0.26666668, b: 0.26666668, a: 0.26666668}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.26666668, g: 0.26666668, b: 0.26666668, a: 0.26666668}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -10685,7 +10684,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1195292392}
-  m_Father: {fileID: 1052226629}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -12750,6 +12749,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1052226629}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1722434789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4079467032304138074, guid: ccd5ec16410b9b84a90c97ed32cbe37c, type: 3}
+  m_PrefabInstance: {fileID: 215098884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1750854927
 GameObject:
   m_ObjectHideFlags: 0
@@ -15381,6 +15385,10 @@ PrefabInstance:
     - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
       propertyPath: cage
       value: 
+      objectReference: {fileID: 1722434789}
+    - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: mask.m_Bits
+      value: 187
       objectReference: {fileID: 0}
     - target: {fileID: 6933254999336860051, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
       propertyPath: m_Name
@@ -15396,6 +15404,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 1436503625}
   - {fileID: 7997885488576768458}
   - {fileID: 215098884}
   - {fileID: 1052226629}
