@@ -25,9 +25,11 @@ public class breakCageCircle : MonoBehaviour
     public GameObject[] cage_pieces;
 
 
-    void Start()
+    audioScript audioManager;
+
+    private void Awake()
     {
-        
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioScript>();
     }
 
     void Update()
@@ -47,6 +49,8 @@ public class breakCageCircle : MonoBehaviour
                 tempObj.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(x_force, y_force),ForceMode2D.Impulse);
             }
 
+            audioManager.PlaySFX(audioManager.cageBreak);
+            audioManager.PlaySFX(audioManager.winNoise);
             Destroy(gameObject);
             
         }

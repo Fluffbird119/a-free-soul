@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
+    
     public void OnPlayButton()
     {
-        SceneManager.LoadScene(1);
+        
+        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
     }
     public void OnQuitButton()
     {

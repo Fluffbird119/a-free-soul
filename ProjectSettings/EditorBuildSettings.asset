@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 5.unity
     guid: 4f987f29a0fce24489edb5fb30ae483f
+  - enabled: 1
+    path: Assets/Scenes/Persistant Gameplay.unity
+    guid: a1df1d8796c08aa4db5f68e577fd1b1e
   m_configObjects: {}

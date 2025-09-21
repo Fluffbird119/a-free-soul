@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - breakCage
+  - Audio
   layers:
   - Default
   - TransparentFX
