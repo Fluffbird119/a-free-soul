@@ -2023,6 +2023,10 @@ PrefabInstance:
       propertyPath: cage
       value: 
       objectReference: {fileID: 1938413764}
+    - target: {fileID: 5371431279148798892, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
+      propertyPath: mask.m_Bits
+      value: 187
+      objectReference: {fileID: 0}
     - target: {fileID: 6933254999336860051, guid: c3a2f127b7593ee458b02527bdf0f485, type: 3}
       propertyPath: m_Name
       value: Player

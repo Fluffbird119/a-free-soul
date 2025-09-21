@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class breakCage : MonoBehaviour
+public class breakCageCircle : MonoBehaviour
 {
     public float x_speed;
     public float y_speed;
@@ -63,7 +63,7 @@ public class breakCage : MonoBehaviour
                 {
                     y_damage_scaler = 15;
                 }
-                cage_health -= 1 + (int)(Mathf.Abs(x_speed) / 15 + Mathf.Abs(y_speed) / y_damage_scaler); // make it so damage scales with height later
+                cage_health -= 1 + (int)(Mathf.Abs(x_speed) / 15 + Mathf.Abs(y_speed) / y_damage_scaler);
             }
         }
     }
