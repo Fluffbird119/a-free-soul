@@ -11,7 +11,7 @@ public class breakCageCircle : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    private GameObject holdervar;
+    private GameObject tempObj;
 
     public int explosion_force = 5;
 
@@ -36,13 +36,13 @@ public class breakCageCircle : MonoBehaviour
 
         if (cage_health <= 0)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < cage_pieces.Length; i++)
             {
                 x_force = Random.Range(-5, 5) * force_multiplier;
                 y_force = Random.Range(-5, 5) * force_multiplier;
 
-                holdervar = Instantiate(cage_pieces[i], new Vector3(transform.position.x + y_force/10, transform.position.y + x_force/10), transform.rotation);
-                holdervar.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(x_force, y_force),ForceMode2D.Impulse);
+                tempObj = Instantiate(cage_pieces[i], new Vector3(transform.position.x + y_force/10, transform.position.y + x_force/10), transform.rotation);
+                tempObj.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(x_force, y_force),ForceMode2D.Impulse);
             }
 
             Destroy(gameObject);
