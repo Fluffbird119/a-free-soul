@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 1420219653}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -410,9 +410,11 @@ MonoBehaviour:
   musicSource: {fileID: 394108494}
   SFXSource: {fileID: 1176086560}
   backgroundMusic: {fileID: 8300000, guid: 2938810af64fbc74999715e5c717c8aa, type: 3}
-  cageHit: {fileID: 0}
-  cageBreak: {fileID: 0}
-  winNoise: {fileID: 0}
+  cageHit: {fileID: 8300000, guid: f407e2c8e1c953444b7f1aec309194f1, type: 3}
+  cageBreak: {fileID: 8300000, guid: c5e8dcf9b81107843afbd401df1d0b80, type: 3}
+  winNoise: {fileID: 8300000, guid: 7a869f3d896e4f6429a52bfc17b4540e, type: 3}
+  menuSelectNoise: {fileID: 8300000, guid: 4da8e65ec7a68464db767030aa5adcde, type: 3}
+  restartLevel: {fileID: 8300000, guid: d37ae564022ec4d429bc8bdc3352e55a, type: 3}
 --- !u!4 &1420219654
 Transform:
   m_ObjectHideFlags: 0

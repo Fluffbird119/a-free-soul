@@ -13,10 +13,17 @@ public class audioScript : MonoBehaviour
     public AudioClip cageHit;
     public AudioClip cageBreak;
     public AudioClip winNoise;
+    public AudioClip menuSelectNoise;
+    public AudioClip restartLevel;
 
     private void Start()
     {
         musicSource.clip = backgroundMusic;
         musicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }

@@ -5,10 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class ToNextLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    audioScript audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<audioScript>();
+    }
+
     public void OnNextLevel(int curlevel)
     {
         SceneManager.LoadSceneAsync(7);
         SceneManager.LoadSceneAsync(curlevel + 1, LoadSceneMode.Additive);
+        audioManager.PlaySFX(audioManager.menuSelectNoise);
     }
 }
