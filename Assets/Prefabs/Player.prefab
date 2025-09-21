@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1121997329629691496}
   - component: {fileID: 4807947491888317444}
   - component: {fileID: 5371431279148798892}
+  - component: {fileID: 6388278220442457050}
   m_Layer: 2
   m_Name: Player
   m_TagString: Untagged
@@ -265,3 +266,20 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &6388278220442457050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6933254999336860051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adf22f9c6a5e0a142befafc4b9d96d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cage: {fileID: 0}
+  backToLevelSelectButton: {fileID: 0}
+  nextLevelButton: {fileID: 0}
+  youEscapedText: {fileID: 0}
+  beforeYouWin: {fileID: 0}

@@ -24,6 +24,7 @@ public class breakCageCircle : MonoBehaviour
 
     public GameObject[] cage_pieces;
 
+
     void Start()
     {
         
@@ -45,7 +46,7 @@ public class breakCageCircle : MonoBehaviour
                 tempObj = Instantiate(cage_pieces[i], new Vector3(transform.position.x + y_force/10, transform.position.y + x_force/10), transform.rotation);
                 tempObj.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(x_force, y_force),ForceMode2D.Impulse);
             }
-            
+
             Destroy(gameObject);
             
         }
