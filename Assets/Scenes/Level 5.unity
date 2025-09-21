@@ -10375,10 +10375,10 @@ MonoBehaviour:
   m_enableVertexGradient: 1
   m_colorMode: 0
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 0.6509804}
-    topRight: {r: 1, g: 1, b: 1, a: 0.6509804}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 0.6509804}
-    bottomRight: {r: 1, g: 1, b: 1, a: 0.6509804}
+    topLeft: {r: 1, g: 1, b: 1, a: 0.64705884}
+    topRight: {r: 1, g: 1, b: 1, a: 0.64705884}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 0.64705884}
+    bottomRight: {r: 1, g: 1, b: 1, a: 0.64705884}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
