@@ -27,7 +27,7 @@ public class winGame : MonoBehaviour
         {
             beforeYouWin.SetActive(false);
 
-            youEscapedText.SetActive(true);
+            //youEscapedText.SetActive(true);
             backToLevelSelectButton.SetActive(true);
             nextLevelButton.SetActive(true);
         }
