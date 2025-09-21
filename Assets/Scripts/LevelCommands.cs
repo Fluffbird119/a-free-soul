@@ -10,11 +10,13 @@ public class LevelCommands : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.R))
         {
-            SceneManager.LoadScene(level + 1);
+            SceneManager.LoadSceneAsync(7);
+            SceneManager.LoadSceneAsync(level + 1, LoadSceneMode.Additive);
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadSceneAsync(7);
+            SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
         }
     }
 }

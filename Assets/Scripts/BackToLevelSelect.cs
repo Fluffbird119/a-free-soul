@@ -7,6 +7,7 @@ public class BackToLevelSelect : MonoBehaviour
 {
     public void OnBackToLevelSelect()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
     }
 }

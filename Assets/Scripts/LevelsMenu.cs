@@ -8,10 +8,12 @@ public class LevelsMenu : MonoBehaviour
 {
     public void OnLevelButton(int level)
     {
-        SceneManager.LoadScene(level + 1);
+        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(level + 1, LoadSceneMode.Additive);
     }
     public void OnBackButton()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync(7);
+        SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
     }
 }
