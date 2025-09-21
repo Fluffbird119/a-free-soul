@@ -12566,6 +12566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: circle cage
       objectReference: {fileID: 0}
+    - target: {fileID: 4079467032304138074, guid: ccd5ec16410b9b84a90c97ed32cbe37c, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
