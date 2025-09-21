@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (cage == null) jumpForce = 10;
+        if (cage == null) jumpForce = 50;
         moveDir.x = Input.GetAxisRaw("Horizontal");
         //moveDir.y = rb.velocity.y;
 
