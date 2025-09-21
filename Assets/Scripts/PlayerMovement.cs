@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float speed = 1;
     [SerializeField] private float jumpForce = 125;
+    [SerializeField] private float distance = 1.25f; 
 
     [SerializeField] private bool isGrounded;
 
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         moveDir.x = Input.GetAxisRaw("Horizontal");
         //moveDir.y = rb.velocity.y;
 
-        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, 1.25f, mask);
+        RaycastHit2D hit = Physics2D.Raycast(gameObject.transform.position, -Vector2.up, distance, mask);
 
         if (hit)
         {
