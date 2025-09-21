@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (cage == null) jumpForce = 10;
         moveDir.x = Input.GetAxisRaw("Horizontal");
         //moveDir.y = rb.velocity.y;
 
@@ -62,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isGrounded)
         {
-            if (Input.GetKeyDown(KeyCode.W) && cage != null || Input.GetKeyDown(KeyCode.Space) && cage != null)
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) //&& cage != null)
             {
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
@@ -71,11 +72,11 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        if (isGrounded && cage != null)
+        if (isGrounded) //&& cage != null)
         {
             rb.AddForce(moveDir * speed, ForceMode2D.Impulse);
         }
-        else if (!isGrounded && cage != null)
+        else if (!isGrounded)// && cage != null)
         {
             rb.AddForce(new Vector2(moveDir.x * speed * 0.5f, 0), ForceMode2D.Impulse);
         }
